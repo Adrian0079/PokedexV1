@@ -1,0 +1,59 @@
+.cardP{
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+
+  font-size: 1.2rem; /* Tamaño de fuente */
+  letter-spacing: 4px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+  text-transform: uppercase; /* Convierte el texto en mayúsculas */
+  background: linear-gradient(45deg, #6bff9c, #b9fde6); /* Fondo con gradiente */
+  display: inline-block; /* Para que el gradiente se aplique correctamente */
+  transform: rotateY(20deg); /* Rotación en el eje Y */
+}
+
+.imgD{
+  /* display: flex; */
+  padding: 10px 10px 10px 10px;
+  justify-content: center;
+  align-items: center;
+  width: 170px; /* Ajusta el tamaño del contenedor según tus necesidades */
+  height: 170px; /* Ajusta el tamaño del contenedor según tus necesidades */
+  background: linear-gradient(45deg, #6beeff, #09ac8c); /* Fondo con gradiente */
+  display: inline-block; /* Para que el gradiente se aplique correctamente */
+  border-radius: 16px; /* Aplica bordes redondeados */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Agrega sombra al contenedor */
+}
+
+.pokedex-number{
+  font-weight: bold;
+}
+
+.INP{
+  display: inline; /* Cambia el elemento de bloque a en línea */
+            padding: 10px;
+            font-size: 18px;
+            border: 2px solid #ffcc01;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            outline: none;
+            transition: box-shadow 0.3s ease;
+            margin: 10px 10px 10px 500px;
+            width: 400px;
+}
+
+.INP:focus {
+  box-shadow: 0 0 20px rgba(255, 204, 1, 0.8);
+
+}
+
+.btCS{
+  display: inline; /* Cambia el elemento de bloque a en línea */
+  margin: 100px 10px 100px 500px;
+  
+}
