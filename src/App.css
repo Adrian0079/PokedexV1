@@ -1,4 +1,4 @@
-.cardP{
+ .cardP{
   border: 1px solid #000000;
   border-radius: 5px;
   padding: 10px;
@@ -56,4 +56,4 @@
   display: inline; /* Cambia el elemento de bloque a en línea */
   margin: 100px 10px 100px 500px;
   
-}
+} 

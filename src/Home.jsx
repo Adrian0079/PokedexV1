@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { app } from './fb'
 import axios from 'axios';
-import { Button, Container, TextField, Typography, createTheme, ThemeProvider } from '@mui/material';
+import { Button, Container, TextField, Typography, createTheme, ThemeProvider, Grid } from '@mui/material';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';  
 
 
@@ -55,62 +55,72 @@ const Home = () => {
   pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
- //--Colocamos la API de pokemon--
+ //--Colocamos la API de pokemon-- HOMEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
   return (
-    <Container>
-      <Typography variant='h2'>Welcome</Typography>
-      
-
-      {/* ---Colocamos la parte de pokemon ----------------------*/}
-      <ThemeProvider theme={theme}>  
-        <Container maxWidth="xs"
-            sx={{
-            border: 4,
-            boxShadow: 5,
-            pb: 2,
-            }}>
-            <TextField
-                className='INP'
-                type="text"
-                placeholder="Search Pokemon"
-                value={searchTerm}
-                onChange={handleSearchChange}
-            />
-            
-        </Container>
-      </ThemeProvider>
-        <Button 
-            variant="contained" 
-            color="error" 
-            onClick={closeSession}
-            endIcon={<ExitToAppIcon />} 
-            className='btCS'>Close session
-        </Button>
-
-
-      <div>
+    <Container sx={{
+        justifyContent: "center",
+        
+        height: '100vh'
+        
+        
+        }}>
+        <Grid container height='100%' alignItems='center'>
+            <Typography variant='h2'>Welcome</Typography>
         
 
-        <div className='container'>
-          {filteredPokemon.map((pokemon, index) => (
-          <div className='cardP'  key={pokemon.name}>{pokemon.name}
-          &nbsp;
-          <span className="pokedex-number">#{index + 1}</span>
-          <img
-              className='imgD'
-              alt={pokemon.name}
-              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${getPokemonId(pokemon.url)}.png`}
-          />
-          </div>
-          
-          ))}
-        </div>
+            {/* ---Colocamos la parte de pokemon ----------------------*/}
+            <ThemeProvider theme={theme}>  
+                <Grid item maxWidth="xs"
+                    sx={{
+                    mt:9,
+                    ml: 5,
+                    mr: 10
+                    }}>
+                        <TextField
+                            className='INP'
+                            type="text"
+                            placeholder="Search Pokemon"
+                            value={searchTerm}
+                            onChange={handleSearchChange}
+                        />
+                
+                </Grid>
+            </ThemeProvider>
 
-      </div>
-      {/* ---Colocamos la parte de pokemon ----------------------*/}
+            <Grid item>
+                <Button 
+                    variant="contained" 
+                    color="error" 
+                    onClick={closeSession}
+                    endIcon={<ExitToAppIcon />} 
+                    className='btCS'>Log out
+                </Button>
+            </Grid>
 
+            <Grid item sx={{
+                mt: 8
+            }}>
+            
+                
+                {filteredPokemon.map((pokemon, index) => (
+                <div className='cardP'  key={pokemon.name}>{pokemon.name}
+                &nbsp;
+                <span className="pokedex-number">#{index + 1}</span>
+                <img
+                    className='imgD'
+                    alt={pokemon.name}
+                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${getPokemonId(pokemon.url)}.png`}
+                />
+                </div>
+                ))}
 
+                
+
+            </Grid>
+              
+
+        </Grid>
     </Container>
   )
 
