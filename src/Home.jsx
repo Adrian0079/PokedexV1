@@ -58,7 +58,7 @@ const Home = () => {
  //--Colocamos la API de pokemon--
 
   return (
-    <div>
+    <Container>
       <Typography variant='h2'>Welcome</Typography>
       
 
@@ -111,7 +111,7 @@ const Home = () => {
       {/* ---Colocamos la parte de pokemon ----------------------*/}
 
 
-    </div>
+    </Container>
   )
 
 
